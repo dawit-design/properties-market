@@ -26,7 +26,6 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
 |      Axios       | used to make HTTP requests from the server|
 |   React Router Dom   | alow us to use DOM-aware compnents like <link> |
 | bycrypt| for password security |
