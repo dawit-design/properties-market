@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Property.destroy_all
+Agent.destroy_all
+User.destroy_all
+
+@admin = User.create!(username: 'admin', email: 'admin@gmail.com', password: '123456')
+
+puts "#{User.count} users created"
+
+@dawit = Agent.create!(name: 'dawit', email: 'dawit@mail.com', office_location: '7 waterhouse st', speciality: 'buyers agent')
+@aman = Agent.create!(name: 'aman', email: 'aman@example.com', office_location: '21 cambridge st', speciality: 'sales agent')
+@mike = Agent.create!(name: 'mike', email: 'mike@email.com', office_location: '21 arlington st', speciality: 'listing agent')
+
+puts "#{Agent.count} agents created"
+
+@somerville = Property.create!(city: 'somerville', user: @admin, state: 'ma', street_adress: '7 waterhouse st', image_url: 'https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg', type: '', year_bulit_in: 1990, price: 300000, description: 'this house was built in 1990 and and on good condition')
+@boston = Property.create!(city: 'boston', user: @admin, state: 'ma', street_adress: '7 waterhouse st', image_url: 'https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg', type: '', year_bulit_in: 1990, price: 300000, description: 'this house was built in 1990 and and on good condition')
+@nyc = Property.create!(city: 'nyc', user: @admin, state: 'ny', street_adress: '7 waterhouse st', image_url: 'https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg', type: '', year_bulit_in: 1990, price: 300000, description: 'this house was built in 1990 and and on good condition')
+
+puts "#{Property.count} properties created"
