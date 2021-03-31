@@ -17,7 +17,7 @@ class PropertiesController < ApplicationController
   # POST /properties
   def create
     @property = Property.new(property_params)
-    @property.user = @current user
+    # @property.user = @current user
     if @property.save
       render json: @property, status: :created, location: @property
     else

@@ -1,5 +1,5 @@
 class AgentsController < ApplicationController
-  before_action :set_agent, only: [:show, :update, :destroy]
+  before_action :set_agent, only: [:show]
 
   # GET /agents
   def index
@@ -22,20 +22,6 @@ class AgentsController < ApplicationController
     else
       render json: @agent.errors, status: :unprocessable_entity
     end
-  end
-
-  # PATCH/PUT /agents/1
-  def update
-    if @agent.update(agent_params)
-      render json: @agent
-    else
-      render json: @agent.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /agents/1
-  def destroy
-    @agent.destroy
   end
 
   private
