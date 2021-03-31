@@ -14,11 +14,14 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Set up backend for full crud
+- Create association and seed the data
+- Deploy backend on heroku
+- Set up frontend structure
+- Create a full crud functionality for frontend and render data on the browser
+- Start styling and work on post MVP goals
+- Deploy on netflify
+- refactor and clean the code.
 
 <br>
 
@@ -47,6 +50,9 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 - Desktop Hero
 
 ![After Login](https://i.imgur.com/my1T36C.png)
+
+- Desktop 
+![Agents page](https://i.imgur.com/apTxmxq.png)
 
 
 #### Component Tree
