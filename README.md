@@ -30,7 +30,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      Axios       | used to make HTTP requests from the server|
-|   React Router Dom   | alow us to use DOM-aware compnents like <link> |
+|   React Router Dom   | allow us to use DOM-aware compnents like <link> |
 | bycrypt| for password security |
 |     Rack-cors    | for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible |
 |  JWT | for token based authentication|
