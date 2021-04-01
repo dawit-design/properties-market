@@ -5,7 +5,7 @@ export const getAllAgents = async () => {
   return resp.data;
 }
 
-export const addAgent = async () => (propertyId, agentId) => {
-  const resp = await api.post(`/properties/${propertyId}/agents/${agentId}`)
-  return resp.data;
-}
+// export const addAgent = async () => (propertyId, agentId) => {
+//   const resp = await api.post(`/properties/${propertyId}/agents/${agentId}`)
+//   return resp.data;
+// }

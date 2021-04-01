@@ -1,6 +1,6 @@
 class PropertiesController < ApplicationController
   before_action :authorize_request, only: [ :create, :update, :destroy ]
-  before_action :set_property, only: [:show, :update, :destroy]
+  before_action :set_property, only: [:update, :destroy]
 
   # GET /properties
   def index
@@ -17,7 +17,7 @@ class PropertiesController < ApplicationController
   # POST /properties
   def create
     @property = Property.new(property_params)
-    # @property.user = @current user
+    @property.user = @current_user
     if @property.save
       render json: @property, status: :created, location: @property
     else
@@ -47,6 +47,6 @@ class PropertiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:city, :state, :street_adress, :image_url, :type, :year_bulit_in, :price, :description)
+      params.require(:property).permit(:city, :state, :street_adress, :image_url, :year_bulit_in, :price, :description)
     end
 end

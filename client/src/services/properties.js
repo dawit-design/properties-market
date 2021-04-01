@@ -10,7 +10,7 @@ export const getOneProperty= async (id) => {
   return resp.data;
 }
 
-export const postProperty = async (PropertyData) => {
+export const postProperty = async (propertyData) => {
   const resp = await api.post('/properties', { property: propertyData });
   return resp.data;
 }
