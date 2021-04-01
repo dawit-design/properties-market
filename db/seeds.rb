@@ -14,9 +14,9 @@ User.destroy_all
 
 puts "#{User.count} users created"
 
-@dawit = Agent.create!(name: 'dawit', email: 'dawit@mail.com', office_location: '7 waterhouse st', speciality: 'buyers agent')
-@aman = Agent.create!(name: 'aman', email: 'aman@example.com', office_location: '21 cambridge st', speciality: 'sales agent')
-@mike = Agent.create!(name: 'mike', email: 'mike@email.com', office_location: '21 arlington st', speciality: 'listing agent')
+@dawit = Agent.create!(name: 'dawit', image_url: 'https://i.pinimg.com/originals/2f/9c/de/2f9cdef00d125963692d69bbdd190844.jpg',email: 'dawit@mail.com', office_location: '7 waterhouse st', speciality: 'buyers agent')
+@aman = Agent.create!(name: 'aman', image_url: 'https://i.pinimg.com/originals/f8/cf/ff/f8cfffd856093bbe31d0d810be4db055.png',email: 'aman@example.com', office_location: '21 cambridge st', speciality: 'sales agent')
+@mike = Agent.create!(name: 'mike', image_url: 'https://s7.favim.com/orig/150929/aww-cute-puppy-sunglasses-Favim.com-3375457.jpg',email: 'mike@email.com', office_location: '21 arlington st', speciality: 'listing agent')
 
 puts "#{Agent.count} agents created"
 

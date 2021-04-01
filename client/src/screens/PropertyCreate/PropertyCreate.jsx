@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function FoodCreate(props) {
+export default function PropertyCreate(props) {
   const [formData, setFormData] = useState({
     name: ''
   })
@@ -8,10 +8,10 @@ export default function FoodCreate(props) {
   const { handleCreate } = props;
 
   const handleChange = (e) => {
-    const { city, value } = e.target;
+    const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
-      [city]: value
+      [name]: value
     }))
   }
 
