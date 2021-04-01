@@ -15,12 +15,12 @@ export const postProperty = async (propertyData) => {
   return resp.data;
 }
 
-export const putFood = async (id, propertyData) => {
+export const putProperty = async (id, propertyData) => {
   const resp = await api.put(`/properties/${id}`, { property: propertyData });
   return resp.data;
 }
 
-export const destroyProperty = async (id, property) => {
+export const destroyProperty = async (id) => {
   const resp = await api.delete(`/properties/${id}`);
   return resp;
 }

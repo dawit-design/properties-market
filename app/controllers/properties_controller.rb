@@ -11,7 +11,9 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1
   def show
+    @property = property.find(params[:id])
     render json: @property
+    # render json: @property, include: :agent
   end
 
   # POST /properties

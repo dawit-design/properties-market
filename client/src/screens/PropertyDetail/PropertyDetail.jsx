@@ -1,11 +1,12 @@
 import {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom'
-import { getOneProperty } from '../services/properties'
+import { useParams} from 'react-router-dom'
+import { getOneProperty} from '../../services/properties'
 
 import React from 'react'
 
 export default function PropertyDetail(props) {
-  const [propertyItem, setPropertyItem] = useState(nul);
+  const [propertyItem, setPropertyItem] = useState(null);
+  const { properties } = props;
   const { id } = useParams();
 
   useEffect(() => {

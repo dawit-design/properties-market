@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import './App.css';
 // components
-import PropertyContainer from './containers/Container/Container'
+import Container from './containers/Container/Container'
 import Layout from './layouts/Layout';
 import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
@@ -56,7 +56,7 @@ function App() {
             />
           </Route>
           <Route path='/'>
-            <PropertyContainer
+            <Container
               currentUser={currentUser}
               
             />

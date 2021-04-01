@@ -1,16 +1,24 @@
 import React from 'react';
+import logo from "./Assets/logo1.png";
+import logo2 from './Assets/logo2.png'
 import { Link } from 'react-router-dom';
+import LayoutStyle from './Layout.css'
 
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
-    <div>
+    <div className="layout-container">
       <header>
-        <Link to='/'><h1>Realtors-inc</h1></Link>
+       
+        <Link to="/landing">
+          <img className="logo" src={logo} alt="icon"/>
+        </Link>
+        {/* <Link to='/properties'><h1>Realtors-inc</h1></Link> */}
+        
         {
           currentUser ?
             <>
-              <p>{currentUser.username}</p>
+              <p>Welcome, {currentUser.username.toUpperCase()}</p>
               <button onClick={handleLogout}>Logout</button>
             </>
             :
@@ -23,15 +31,16 @@ export default function Layout(props) {
       </header>
       <hr />
       {currentUser && (
-        <>
+        <div className="tab-container">
           <Link to='/properties'>Properties</Link>
           <Link to='/sell/new'>Sell</Link>
+          <Link to='/buy'>Buy</Link>
           <Link to='/agents'>Agents</Link>
-          {/* <Link to='/properties/details'>Agents</Link> */}
           <hr />
-        </>
+        </div>
       )}
       {props.children}
     </div>
   )
 }
+

@@ -2,7 +2,10 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import Properties from '../../screens/Properties/Properties'
 import PropertyCreate from '../../screens/PropertyCreate/PropertyCreate'
+import PropertyDetail from '../../screens/PropertyDetail/PropertyDetail'
+import PropertyEdit from '../../screens/PropertyEdit/PropertyEdit'
 import Agents from '../../screens/Agents/Agents'
+import LandingPage from '../../screens/LandingPage/LandingPage'
 
 import { getAllAgents } from '../../services/agents';
 import { getAllProperties, postProperty, putProperty, destroyProperty } from '../../services/properties';
@@ -37,6 +40,13 @@ export default function PropertyContainer(props) {
     setProperties(prevState => [...prevState, newProperty]);
     history.push('/properties');
   }
+  const handleUpdate = async (id, propertyData) => {
+    const updatedProperty = await putProperty(id, propertyData);
+    setProperties(prevState => prevState.map(property => {
+      return property.id === Number(id) ? updatedProperty : property
+    }))
+    history.push('/properties');
+  }
 
   const handleDelete = async (id) => {
     await destroyProperty(id);
@@ -45,6 +55,11 @@ export default function PropertyContainer(props) {
 
   return (
     <Switch>
+      <Route path='/landing'>
+        <LandingPage
+          properties={properties}
+        />
+      </Route>
       <Route path='/properties'>
         <Properties
           properties={properties}
@@ -60,6 +75,17 @@ export default function PropertyContainer(props) {
       <Route path='/sell/new'>
         <PropertyCreate
           handleCreate={handleCreate}
+        />
+      </Route>
+      <Route path='/properties/:id'>
+        <PropertyDetail
+          properties={properties}
+        />
+      </Route>
+      <Route path='/properties/:id/edit'>
+        <PropertyEdit
+          properties={properties}
+          handleUpdate={handleUpdate}
         />
       </Route>
     </Switch>
