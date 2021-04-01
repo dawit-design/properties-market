@@ -14,12 +14,19 @@ export default function PropertyDetail(props) {
       setPropertyItem(propertyData);
     }
     fetchProperty()
-  },[])
+  }, [])
 
   return (
     <div>
-      <img src={propertyItem.image_url} alt="" />
+      {
+        propertyItem ?(
+        <div>
+           <img src={propertyItem.image_url} alt="" />
       <button>Ask Tour</button>
-    </div>
+          </div>
+        ) : <h2>Loading . . .</h2>
+      }
+      </div>
+        
   )
 }

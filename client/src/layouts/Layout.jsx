@@ -27,6 +27,7 @@ export default function Layout(props) {
           <Link to='/properties'>Properties</Link>
           <Link to='/sell/new'>Sell</Link>
           <Link to='/agents'>Agents</Link>
+          {/* <Link to='/properties/details'>Agents</Link> */}
           <hr />
         </>
       )}
