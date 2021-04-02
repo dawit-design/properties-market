@@ -13,7 +13,7 @@ export default function Layout(props) {
         <Link to="/landing">
           <img className="logo" src={logo2} alt="icon"/>
         </Link>
-        {/* <Link to='/properties'><h1>Realtors-inc</h1></Link> */}
+        {/* <Link to='/landing'><h1>Realtors-inc</h1></Link> */}
         
         {
           currentUser ?

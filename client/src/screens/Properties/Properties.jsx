@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-// import { getAllProperties} from '../../services/properties';
 
 export default function Properties(props) {
   const [open, handleOpen] = useState(false)
@@ -22,7 +21,9 @@ export default function Properties(props) {
       <h1>Homes</h1>
       <p>These are available properties on the market right now</p>
          <div>
-        <input type="text"
+        <input
+          type="text"
+          autocomplete="on"
         placeholder="search-by-city"
         onChange={(e) => setSearch(e.target.value)}        
         />
@@ -30,11 +31,12 @@ export default function Properties(props) {
       </div>
       {
         filterProperties.map(property => (
-          <div key={property.id}>
+          <React.Fragment key={property.id}>
             <div className="image-container">
             <Link className="pro-img" to={`/properties/${property.id}`}>
               <img src={property.image_url} alt="" />
               </Link>
+              <h2>{property.city}</h2>
               </div>
             {
               currentUser?.id === property.user_id &&
@@ -43,7 +45,7 @@ export default function Properties(props) {
                 <button onClick={() => handleOpen(property.id)}>delete</button>
               </>
             }
-          </div>
+          </React.Fragment>
         ))
       }
     </div>

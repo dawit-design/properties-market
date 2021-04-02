@@ -9,7 +9,7 @@ import About from '../../screens/About/About'
 import Contact from '../../screens/Contact/Contact';
 import LandingPage from '../../screens/LandingPage/Landingpage'
 import { getAllAgents } from '../../services/agents';
-import { getAllProperties, postProperty, putProperty, destroyProperty } from '../../services/properties';
+import { getAllProperties,getOneProperty, postProperty, putProperty, destroyProperty } from '../../services/properties';
 
 
 
@@ -34,7 +34,8 @@ export default function PropertyContainer(props) {
     }
     fetchAgents();
   }, [])
-
+ 
+ 
   const handleCreate = async (propertyData) => {
     const newProperty = await postProperty(propertyData);
     setProperties(prevState => [...prevState, newProperty]);
@@ -55,6 +56,17 @@ export default function PropertyContainer(props) {
 
   return (
     <Switch>
+       <Route path='/properties/:id'>
+        <PropertyDetail
+          properties={PropertyDetail}
+        />
+      </Route>
+      <Route path='/properties/:id/edit'>
+        <PropertyEdit
+          properties={properties}
+          handleUpdate={handleUpdate}
+        />
+      </Route>
       <Route path='/landing'>
         <LandingPage
           properties={properties}
@@ -76,17 +88,6 @@ export default function PropertyContainer(props) {
       <Route path='/sell/new'>
         <PropertyCreate
           handleCreate={handleCreate}
-        />
-      </Route>
-      <Route path='/properties/:id'>
-        <PropertyDetail
-          properties={properties}
-        />
-      </Route>
-      <Route path='/properties/:id/edit'>
-        <PropertyEdit
-          properties={properties}
-          handleUpdate={handleUpdate}
         />
       </Route>
       <Route path="/contact">

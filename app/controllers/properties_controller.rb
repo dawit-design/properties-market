@@ -11,9 +11,8 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1
   def show
-    @property = property.find(params[:id])
-    render json: @property
-    # render json: @property, include: :agent
+    @property = Property.find(params[:id])
+    render json: @property, include: :user
   end
 
   # POST /properties
@@ -44,7 +43,7 @@ class PropertiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_property
-      @property = Property.find(params[:id])
+      @property = @current_user.properties.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

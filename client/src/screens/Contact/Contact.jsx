@@ -14,11 +14,12 @@ const Contact = () => {
     };
     let response = await fetch("http://localhost:30001/contact", {
       method: "POST",
-      // headers: {
-      //   "Content-Type": "application/json;charset=utf-8",
-      // },
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
       body: JSON.stringify(details),
     });
+    console.log(response);
     setStatus("Submit");
     let result = await response.json();
     alert(result.status);

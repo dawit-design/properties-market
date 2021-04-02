@@ -7,8 +7,8 @@ import banner from "../img/images/bg-img.jpeg"
 export default function LandingPage() {
 	return (
 		<>
-			<div page="About Us" breadcrumb="about" />
-			<section class="about-section spad">
+			<div page="landing-page" breadcrumb="landing" />
+			<section class="landing-section spad">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6">
@@ -41,7 +41,7 @@ export default function LandingPage() {
 							</div>
 						</div>
 						<div class="col-lg-6">
-              <div class="about-pic set-bg">
+              <div class="landing-pic set-bg">
                 <Link to= '/landing'>
                 <img src={aboutImg} alt="about us" />
                 </Link>
