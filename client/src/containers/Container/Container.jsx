@@ -6,7 +6,7 @@ import PropertyDetail from '../../screens/PropertyDetail/PropertyDetail'
 import PropertyEdit from '../../screens/PropertyEdit/PropertyEdit'
 import Agents from '../../screens/Agents/Agents'
 import LandingPage from '../../screens/LandingPage/LandingPage'
-
+import Contact from '../../screens/Contact/Contact';
 import { getAllAgents } from '../../services/agents';
 import { getAllProperties, postProperty, putProperty, destroyProperty } from '../../services/properties';
 
@@ -21,7 +21,6 @@ export default function PropertyContainer(props) {
   useEffect(() => {
     const fetchProperties = async () => {
       const propertyData = await getAllProperties();
-      console.log(propertyData)
       setProperties(propertyData);
     }
     fetchProperties();
@@ -88,6 +87,9 @@ export default function PropertyContainer(props) {
           handleUpdate={handleUpdate}
         />
       </Route>
+      <Route path="/contact">
+            <Contact />
+				</Route>
     </Switch>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
-import properties from './properties.css'
+
 
 export default function Properties(props) {
   const [open, handleOpen] = useState(false)

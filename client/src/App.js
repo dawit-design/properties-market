@@ -7,6 +7,8 @@ import Container from './containers/Container/Container'
 import Layout from './layouts/Layout';
 import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
+import Footer from "./components/Shared/Footer";
+
 // function import
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 function App() {
@@ -58,10 +60,11 @@ function App() {
           <Route path='/'>
             <Container
               currentUser={currentUser}
-              
             />
           </Route>
+  
         </Switch>
+        <Footer />
       </Layout>
     </div>
   );

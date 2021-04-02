@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react'
 import { useParams} from 'react-router-dom'
-import { getOneProperty} from '../../services/properties'
 
 import React from 'react'
 
@@ -10,12 +9,11 @@ export default function PropertyDetail(props) {
   const { id } = useParams();
 
   useEffect(() => {
-    const fetchProperty = async () => {
-      const propertyData = await getOneProperty(id);
-      setPropertyItem(propertyData);
+    if (properties.length) {
+      const oneProperty = properties.find(property => property.id === Number(id));
+      setPropertyItem(oneProperty)
     }
-    fetchProperty()
-  }, [])
+  }, [properties, id])
 
   return (
     <div>

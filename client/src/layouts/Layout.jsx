@@ -36,6 +36,7 @@ export default function Layout(props) {
           <Link to='/sell/new'>Sell</Link>
           <Link to='/buy'>Buy</Link>
           <Link to='/agents'>Agents</Link>
+          <Link to='/contact'>Contact</Link>
           <hr />
         </div>
       )}
