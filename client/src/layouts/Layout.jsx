@@ -32,11 +32,12 @@ export default function Layout(props) {
       <hr />
       {currentUser && (
         <div className="tab-container">
-          <Link to='/properties'>Properties</Link>
+          <Link to='/properties'>properties<i className="fa fa-home"></i> </Link>
           <Link to='/sell/new'>Sell</Link>
           <Link to='/buy'>Buy</Link>
           <Link to='/agents'>Agents</Link>
           <Link to='/contact'>Contact</Link>
+          <Link to='/about'>About</Link>
           <hr />
         </div>
       )}

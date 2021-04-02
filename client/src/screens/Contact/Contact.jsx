@@ -26,7 +26,28 @@ const Contact = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className='contact-form'>
+              <div id='sect1'>
+          <span>
+            Contact us and we will get back to you within 24 hours.
+            </span>
+          <br/>
+                  <span>
+                      <i className="fas fa-map-marker-alt"></i>
+                      Somerville,MA
+                  </span>
+          <br/>
+                  <span>
+                      <i className="fas fa-mobile-alt"></i>
+                      +123 456 7890
+                  </span>
+          <br/>
+                  <span>
+                      <i className="far fa-envelope"></i>
+                      realtors-inc@gmail.com
+                  </span>
+          </div>
+      
         <label htmlFor="name" required>Name:</label>
         <input type="text" id="name" required />
       </div>

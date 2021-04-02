@@ -5,8 +5,9 @@ import PropertyCreate from '../../screens/PropertyCreate/PropertyCreate'
 import PropertyDetail from '../../screens/PropertyDetail/PropertyDetail'
 import PropertyEdit from '../../screens/PropertyEdit/PropertyEdit'
 import Agents from '../../screens/Agents/Agents'
-import LandingPage from '../../screens/LandingPage/LandingPage'
+import About from '../../screens/About/About'
 import Contact from '../../screens/Contact/Contact';
+import LandingPage from '../../screens/LandingPage/Landingpage'
 import { getAllAgents } from '../../services/agents';
 import { getAllProperties, postProperty, putProperty, destroyProperty } from '../../services/properties';
 
@@ -15,6 +16,8 @@ import { getAllProperties, postProperty, putProperty, destroyProperty } from '..
 export default function PropertyContainer(props) {
   const [properties, setProperties] = useState([]);
   const [agents, setAgents] = useState([]);
+  const [search, setSearch] = useState("");
+  const [filterProperties, setFilterProperties] = useState([]);
   const history = useHistory();
   const { currentUser } = props;
   
@@ -22,9 +25,16 @@ export default function PropertyContainer(props) {
     const fetchProperties = async () => {
       const propertyData = await getAllProperties();
       setProperties(propertyData);
+      if (propertyData) {
+        setFilterProperties(
+          propertyData.filter((property) => {
+            return property?.city?.toLowerCase().includes(search.toLowerCase())
+          })
+        )
+      }
     }
     fetchProperties();
-  }, [])
+  }, [search])
   
   useEffect(() => {
     const fetchAgents = async () => {
@@ -89,6 +99,9 @@ export default function PropertyContainer(props) {
       </Route>
       <Route path="/contact">
             <Contact />
+      </Route>
+      <Route exact path="/about">
+					<About />
 				</Route>
     </Switch>
   )

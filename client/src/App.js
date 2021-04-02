@@ -1,3 +1,4 @@
+
 // package import
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
@@ -9,7 +10,9 @@ import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
 import Footer from "./components/Shared/Footer";
 
+
 // function import
+
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -40,12 +43,12 @@ function App() {
     removeToken();
   }
 
-  return (
+  return (  
     <div className="App">
         <Layout
         currentUser={currentUser}
         handleLogout={handleLogout}
-      >
+        >
         <Switch>
         <Route path='/login'>
             <Login
@@ -62,11 +65,13 @@ function App() {
               currentUser={currentUser}
             />
           </Route>
+         
   
         </Switch>
-        <Footer />
-      </Layout>
-    </div>
+          <Footer />
+        </Layout>
+       
+      </div>
   );
 }
 
