@@ -11,7 +11,7 @@ export default function Layout(props) {
       <header>
        
         <Link to="/landing">
-          <img className="logo" src={logo} alt="icon"/>
+          <img className="logo" src={logo2} alt="icon"/>
         </Link>
         {/* <Link to='/properties'><h1>Realtors-inc</h1></Link> */}
         
@@ -19,11 +19,11 @@ export default function Layout(props) {
           currentUser ?
             <>
               <p>Welcome, {currentUser.username.toUpperCase()}</p>
-              <button onClick={handleLogout}>Logout</button>
+              
             </>
             :
             <>
-              <Link to='/login'>Login</Link>
+              <Link to='/login'>Sign In</Link>
               <Link to='/Register'>Register</Link>
             </>
             
@@ -32,12 +32,13 @@ export default function Layout(props) {
       <hr />
       {currentUser && (
         <div className="tab-container">
-          <Link to='/properties'>properties<i className="fa fa-home"></i> </Link>
+          <Link to='/properties'>Properties<i className="fa fa-home"></i> </Link>
           <Link to='/sell/new'>Sell</Link>
           <Link to='/buy'>Buy</Link>
           <Link to='/agents'>Agents</Link>
           <Link to='/contact'>Contact</Link>
           <Link to='/about'>About</Link>
+          <Link onClick={handleLogout}>Sign Out</Link>
           <hr />
         </div>
       )}

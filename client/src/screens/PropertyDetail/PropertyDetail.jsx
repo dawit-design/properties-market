@@ -13,7 +13,7 @@ export default function PropertyDetail(props) {
       const oneProperty = properties.find(property => property.id === Number(id));
       setPropertyItem(oneProperty)
     }
-  }, [properties, id])
+  }, [id])
 
   return (
     <div>

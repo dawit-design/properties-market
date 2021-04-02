@@ -31,14 +31,6 @@ export default function Footer() {
 						</div>
 					</div>
 					<div className="col-lg-2 col-sm-6">
-						<div className="fs-widget">
-							<h5>Links</h5>
-							<ul>
-								<li>
-									<a href="/contact">Contact</a>
-								</li>
-							</ul>
-						</div>
 					</div>
 					<div className="col-lg-4 col-md-6">
 						<div className="fs-widget">

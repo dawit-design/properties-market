@@ -16,8 +16,6 @@ import { getAllProperties, postProperty, putProperty, destroyProperty } from '..
 export default function PropertyContainer(props) {
   const [properties, setProperties] = useState([]);
   const [agents, setAgents] = useState([]);
-  const [search, setSearch] = useState("");
-  const [filterProperties, setFilterProperties] = useState([]);
   const history = useHistory();
   const { currentUser } = props;
   
@@ -25,16 +23,9 @@ export default function PropertyContainer(props) {
     const fetchProperties = async () => {
       const propertyData = await getAllProperties();
       setProperties(propertyData);
-      if (propertyData) {
-        setFilterProperties(
-          propertyData.filter((property) => {
-            return property?.city?.toLowerCase().includes(search.toLowerCase())
-          })
-        )
-      }
     }
     fetchProperties();
-  }, [search])
+  },[])
   
   useEffect(() => {
     const fetchAgents = async () => {
@@ -76,6 +67,7 @@ export default function PropertyContainer(props) {
           currentUser={currentUser}
         />
       </Route>
+      
       <Route path='/agents'>
         <Agents
           agents={agents}
@@ -103,6 +95,7 @@ export default function PropertyContainer(props) {
       <Route exact path="/about">
 					<About />
 				</Route>
+        
     </Switch>
   )
 }

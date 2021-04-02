@@ -1,17 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-
+// import { getAllProperties} from '../../services/properties';
 
 export default function Properties(props) {
   const [open, handleOpen] = useState(false)
-  const {properties, currentUser} = props
+  const { properties, currentUser } = props
+  const [search, setSearch] = useState("");
+  const [filterProperties, setFilterProperties] = useState([]);
+  useEffect(() => {
+    if (properties) {
+      setFilterProperties(
+        properties.filter((property) => {
+         return property.city?.toLowerCase().includes(search.toLowerCase())
+       })
+     )
+   }
+  },[search])
 
   return (
     <div>
       <h1>Homes</h1>
       <p>These are available properties on the market right now</p>
+         <div>
+        <input type="text"
+        placeholder="search-by-city"
+        onChange={(e) => setSearch(e.target.value)}        
+        />
+      
+      </div>
       {
-        properties.map(property => (
+        filterProperties.map(property => (
           <div key={property.id}>
             <div className="image-container">
             <Link className="pro-img" to={`/properties/${property.id}`}>
