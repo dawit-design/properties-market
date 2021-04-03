@@ -27,7 +27,7 @@ export default function Login(props) {
         <input
           type='text'
           name='username'
-          autocomplete="on"
+          autoComplete="on"
           value={username}
           onChange={handleChange}
         />
@@ -38,7 +38,7 @@ export default function Login(props) {
         <input
           type='password'
           name='password'
-          autocomplete="on"
+          autoComplete="on"
           value={password}
           onChange={handleChange}
         />

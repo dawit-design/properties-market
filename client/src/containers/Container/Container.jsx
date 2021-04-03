@@ -56,15 +56,15 @@ export default function PropertyContainer(props) {
 
   return (
     <Switch>
-       <Route path='/properties/:id'>
-        <PropertyDetail
-          properties={PropertyDetail}
-        />
-      </Route>
       <Route path='/properties/:id/edit'>
         <PropertyEdit
           properties={properties}
           handleUpdate={handleUpdate}
+        />
+      </Route>
+       <Route path='/properties/:id'>
+        <PropertyDetail
+          properties={PropertyDetail}
         />
       </Route>
       <Route path='/landing'>

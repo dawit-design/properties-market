@@ -41,8 +41,8 @@ export default function Properties(props) {
             {
               currentUser?.id === property.user_id &&
               <>
-                <Link to={`/properties/${property.id}/edit`}><button>Edit</button></Link>
-                <button onClick={() => handleOpen(property.id)}>delete</button>
+                {/* <Link to={`/properties/${property.id}/edit`}><button>Edit</button></Link>
+                <button onClick={() => handleOpen(property.id)}>delete</button> */}
               </>
             }
           </React.Fragment>

@@ -21,7 +21,13 @@ export default function PropertyEdit(props) {
     const prefillFormData = () => {
       const propertyItem = properties.find(property => property.id === Number(id));
       setFormData({
-        city: propertyItem.city
+        city: propertyItem.city,
+        state: propertyItem.state,
+        street_adress: propertyItem.street_adress,
+        image_url: propertyItem.image_url,
+        year_bulit_in: propertyItem.year_bulit_in,
+        price: propertyItem.price,
+        description: propertyItem.description,
       })
     }
     if (properties.length) {
