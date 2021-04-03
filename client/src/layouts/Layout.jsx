@@ -2,7 +2,7 @@ import React from 'react';
 import logo from "./Assets/logo1.png";
 import logo2 from './Assets/logo2.png'
 import { Link } from 'react-router-dom';
-import LayoutStyle from './Layout.css'
+import './Layout.css'
 
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;

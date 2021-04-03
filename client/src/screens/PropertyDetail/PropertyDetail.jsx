@@ -36,7 +36,8 @@ export default function PropertyDetail(props) {
         <div>
           <h2>{property.city}</h2>
           <img key={ property.id}src={property.image_url} alt="" />
-          <Link to={`/properties/${property.id}/edit`}>
+          <Link to={`/properties/${property.id}/edit`}> 
+            <br/>
             <button>Edit</button></Link>
       
           <button onClick={() => handleOpen(property.id)}>delete</button>
@@ -52,7 +53,7 @@ export default function PropertyDetail(props) {
         <Modal
           open={open}
           handleOpen={handleOpen}
-         
+          handleDelete={handleDelete}
         />
       )}
       </div>

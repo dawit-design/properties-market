@@ -92,7 +92,7 @@ export default function PropertyEdit(props) {
         Year-Built-In:
         <input
           type='text'
-          name='year_bulit'
+          name='year_bulit_in'
           value={year_bulit_in}
           onChange={handleChange}
         />

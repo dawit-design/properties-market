@@ -6,11 +6,12 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     if(!e.target.checkValidity())
     setStatus("Sending...");
-    const { name, email, message } = e.target.elements;
+    const { name, email, message, number} = e.target.elements;
     let details = {
       name: name.value,
       email: email.value,
       message: message.value,
+      number: message.value,
     };
     let response = await fetch("http://localhost:30001/contact", {
       method: "POST",
@@ -55,6 +56,10 @@ const Contact = () => {
       <div>
         <label htmlFor="email" required>Email:</label>
         <input type="email" id="email" required />
+      </div>
+      <div>
+        <label htmlFor="phone" required>Phone Number:</label>
+        <input type="number" id="number" required />
       </div>
       <div>
         <label htmlFor="message" required>Message:</label>

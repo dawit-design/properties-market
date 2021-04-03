@@ -52,6 +52,7 @@ export default function PropertyContainer(props) {
   const handleDelete = async (id) => {
     await destroyProperty(id);
     setProperties(prevState => prevState.filter(property => property.id !== id))
+    history.push('/properties');
   }
 
   return (
@@ -65,6 +66,7 @@ export default function PropertyContainer(props) {
        <Route path='/properties/:id'>
         <PropertyDetail
           properties={PropertyDetail}
+          handleDelete={handleDelete}
         />
       </Route>
       <Route path='/landing'>
@@ -75,7 +77,7 @@ export default function PropertyContainer(props) {
       <Route path='/properties'>
         <Properties
           properties={properties}
-          handleDelete={handleDelete}
+          
           currentUser={currentUser}
         />
       </Route>
