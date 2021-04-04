@@ -28,7 +28,7 @@ export default function LandingPage() {
 										return (
 											<div className="af-item" key={id}>
                         <div className="af-icon">
-                          <img src={img} alt="" />
+                          <img className="af-icon" src={img} alt="" />
 												</div>
 												<div className="af-text">
 													<h6>{title}</h6>

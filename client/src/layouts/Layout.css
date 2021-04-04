@@ -1,4 +1,10 @@
 
+.layout-container{
+  display: inline-block;
+  /* float: right; */
+  width: 100%;
+}
+
 .logo{
   border-radius : 50%;
   width : 70px;
@@ -13,4 +19,7 @@
 .logo:hover {
   box-shadow: 5px 8px #37b9f1;
   box-shadow: 5px 5px #2af598;
+}
+.tab-container{
+  
 }

@@ -14,6 +14,7 @@
   color: #2af598;
   padding-top: 20px;
 }
+
 h6, p{
   color: #08b3e5;
   font-size: 18px;
@@ -24,7 +25,7 @@ h6, p{
   flex-direction: column;
   color: hsl(180, 19%, 14%);
   margin: 15px;
-  width: 450px;
+  width: 550px;
   height: 560px;
   background: linear-gradient(
     90deg,
@@ -34,10 +35,14 @@ h6, p{
   border: 1px solid hsl(280, 18%, 97%);
   border-radius: 18px;
   box-shadow: 5px 8px rgba(9,76,89, 0.3);
+  cursor: pointer;
+}
+.landing-pic:hover{
+ background: #08b3e5;
 }
 .landing-img-bottom{
   margin: 20px auto;
-  width: 440px;
+  width: 470px;
   height: 500px;
   padding: 0.5vh;
   /* border: 1px solid #fff; */

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import './Register.css'
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -19,42 +19,52 @@ export default function Register(props) {
   }
 
   return (
-    <form onSubmit={(e)=>{
+    
+    <form className="form-container" onSubmit={(e)=>{
       e.preventDefault();
       handleRegister(formData);
     }}>
-      <h3>Register</h3>
+      <div className="sign-up-form">
+      <h1>Register</h1>
       <label>
-        Username:
+          Username:
         <input
+            className="form-input"
           type='text'
           name='username'
           value={username}
-          onChange={handleChange}
+            onChange={handleChange}
+            required
         />
       </label>
       <br />
       <label>
-        Email:
+          Email:
         <input
+            className="form-input"
           type='text'
           name='email'
           value={email}
-          onChange={handleChange}
+            onChange={handleChange}
+            required
         />
       </label>
       <br />
       <label>
-        Password:
+          Password:
         <input
+            className="form-input"
           type='password'
           name='password'
           value={password}
-          onChange={handleChange}
+            onChange={handleChange}
+            required
         />
       </label>
       <br />
-      <button>Submit</button>
-    </form>
+        <button className='sign-up-button'>Submit</button>
+        </div> 
+      </form>
+      
   )
 }

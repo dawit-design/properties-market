@@ -32,7 +32,7 @@ export default function Layout(props) {
       <hr />
       {currentUser && (
         <div className="tab-container">
-          <div className="li">
+          <div className="links-header">
           <Link to='/properties'>Properties<i className="fa fa-home"></i> </Link>
           <Link to='/buy'>Buy</Link>
           <Link to='/rent'>Rent</Link>
