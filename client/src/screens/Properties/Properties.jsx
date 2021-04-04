@@ -18,10 +18,9 @@ export default function Properties(props) {
 
   return (
     <div className="property-container">
-      <h1>Homes</h1>
-      <p>These are available properties on the market right now</p>
-         <div>
+         <div className="search-box">
         <input
+          className="search-box"
           type="text"
           autocomplete="on"
         placeholder="search-by-city"
@@ -29,6 +28,7 @@ export default function Properties(props) {
         />
       
       </div>
+      <h3>These are available properties on the market right now</h3>
       {
         filterProperties.map(property => (
           <React.Fragment key={property.id}>

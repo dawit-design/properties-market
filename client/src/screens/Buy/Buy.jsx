@@ -12,11 +12,12 @@ export default function Buy(props) {
           item.price > 10000
         )).map(property => (
           <React.Fragment key={property.id}>
+            <div className="image-container">
             <Link to={`/properties/${property.id}`}>
+            <img className="pro-img" src={property.image_url} alt=""/>
+              </Link>
               <h2>{property.city.toUpperCase()},{property.state.toUpperCase()}</h2>
-            <img src={property.image_url} alt=""/>
-            </Link>
-            
+            </div>
           </React.Fragment>
         ))
       }
