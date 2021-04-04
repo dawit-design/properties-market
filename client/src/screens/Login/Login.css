@@ -38,26 +38,19 @@ body{
     border-bottom: 2px solid #37b9f1;
 }
 .sign-in-btn{
-  margin-top: 28px;
   width: 120px;
-  height: 32px;
-  background: #16a085;
+  padding: 7px;
+  margin: 10px 0;
+  background-color: tomato;
   border: none;
-  border-radius: 2px;
-  color: #FFF;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: 0.1s ease;
-  cursor: pointer;
+  outline: none;
+  border-radius: 25px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #eee;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
 }
 .sign-in-btn:hover{
-  opacity: 0.8;
-  box-shadow: 0 2px 4px #fff;
-  transition: 0.1s ease;
+  color : #37b9f1;
 }
-.sign-in-btn:active{
-  opacity: 1;
-  box-shadow: 0 1px 2px #fff;
-  transition: 0.1s ease;
-}
+
+

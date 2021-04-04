@@ -24,7 +24,7 @@ export default function Login(props) {
       handleLogin(formData);
       }}>
       <div className="login-cont">
-      <h1>Singn In</h1>
+      <h1>Sign In</h1>
       <label>
           Username:
         <input

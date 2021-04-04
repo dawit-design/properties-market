@@ -14,9 +14,18 @@ export default function Agents(props) {
       {
         agents.map(agent => (
           <div className="agent-profile" key={agent.id}>
-            <h1 >{agent.name}</h1>
+           
             <img className="profile-images" src={agent.image_url} alt="profile picture" />
-            <p className="speciality">{ agent.speciality}</p>
+            <h1 >{agent.name.toUpperCase()}</h1>
+            <h3>{agent.office_location}</h3>
+            <h3 className="speciality">{agent.speciality}</h3>
+            <p>{agent.about}</p>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                </ul>
           </div>
          
           

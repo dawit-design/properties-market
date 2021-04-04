@@ -10,7 +10,7 @@ export default function LandingPage() {
 		<>
 		
 			<section className="landing-section-container">
-				<div className="container">
+				<div className="container-land">
 					<div className="row">
 						<div className="col-lg-6">
 							<div className="about-text">
