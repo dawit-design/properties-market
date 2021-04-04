@@ -1,23 +1,22 @@
 import React from "react";
 import data from "../AboutData/Data";
 import { Link } from 'react-router-dom';
-import aboutImg from "../img/banner.jpeg";
+import aboutImg from "../img/house.jpeg";
 import banner from "../img/images/bg-img.jpeg"
 import './LandingPage.css'
 
 export default function LandingPage() {
 	return (
 		<>
-			<div className="landing-page" />
-			<section className="landing-section spad">
+		
+			<section className="landing-section-container">
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-6">
 							<div className="about-text">
 								<div className="at-title">
-                  <h2>Welcome to Realtors-inc</h2>
-                  {/* <img src={banner} alt=""/> */}
-									<p>
+                  <h2 className="layout-welcome">Welcome to Realtors-inc</h2>
+									<p className='layout-ptag'>
 										Lorem Ipsum has been the industry’s standard dummy text ever
 										since the 1500s, when an unknown printer took a galley of
 										type.
@@ -44,7 +43,7 @@ export default function LandingPage() {
 						<div class="col-lg-6">
               <div class="landing-pic set-bg">
                 <Link to= '/landing'>
-                <img src={aboutImg} alt="about us" />
+                <img src={aboutImg} className="landing-img-bottom" />
                 </Link>
 								
 							</div>
