@@ -1,13 +1,1 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 
-header {
-  background: url(../img/images/bg-img.jpeg) no-repeat;
-  height: 100vh;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}

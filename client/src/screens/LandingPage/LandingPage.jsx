@@ -16,7 +16,7 @@ export default function LandingPage() {
 							<div className="about-text">
 								<div className="at-title">
                   <h2>Welcome to Realtors-inc</h2>
-                  <img src={banner} alt=""/>
+                  {/* <img src={banner} alt=""/> */}
 									<p>
 										Lorem Ipsum has been the industry’s standard dummy text ever
 										since the 1500s, when an unknown printer took a galley of
