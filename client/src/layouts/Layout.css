@@ -2,17 +2,7 @@
   margin : 0px;
   padding : 0px;
 }
-.layout-container{
 
-}
-header {
-  width : 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction : row;
-  padding : 10px auto;
-  
-}
 .logo{
   border-radius : 50%;
   width : 70px;
@@ -25,8 +15,13 @@ header {
   top:0;
 }
 .tab-container{
-  width: 100%;
-  height: 50px;
-  margin: 20px;
-  padding: 10px;
+  float: right;
+  list-style : none;
+  margin-top: 30px;
+}
+.li {
+  display: inline-block;
+}
+.tab-container  link{
+  color: #fff;
 }

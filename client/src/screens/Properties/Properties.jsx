@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-
+import './Properties.css'
 export default function Properties(props) {
-  const [open, handleOpen] = useState(false)
-  const { properties, currentUser } = props
+  const { properties} = props
   const [search, setSearch] = useState("");
   const [filterProperties, setFilterProperties] = useState([]);
   useEffect(() => {
     if (properties) {
       setFilterProperties(
         properties.filter((property) => {
-         return property.city?.toLowerCase().includes(search.toLowerCase())
+         return property.city.toLowerCase().includes(search.toLowerCase())
        })
      )
    }
@@ -36,15 +35,8 @@ export default function Properties(props) {
             <Link className="pro-img" to={`/properties/${property.id}`}>
               <img src={property.image_url} alt="" />
               </Link>
-              <h2>{property.city}</h2>
+              <h2>{property.city.toUpperCase()}</h2>
               </div>
-            {
-              currentUser?.id === property.user_id &&
-              <>
-                {/* <Link to={`/properties/${property.id}/edit`}><button>Edit</button></Link>
-                <button onClick={() => handleOpen(property.id)}>delete</button> */}
-              </>
-            }
           </React.Fragment>
         ))
       }

@@ -6,6 +6,8 @@ import PropertyDetail from '../../screens/PropertyDetail/PropertyDetail'
 import PropertyEdit from '../../screens/PropertyEdit/PropertyEdit'
 import Agents from '../../screens/Agents/Agents'
 import About from '../../screens/About/About'
+import Buy from '../../screens/Buy/Buy'
+import Rent from '../../screens/Rent/Rent'
 import Contact from '../../screens/Contact/Contact';
 import LandingPage from '../../screens/LandingPage/Landingpage'
 import { getAllAgents } from '../../services/agents';
@@ -79,6 +81,16 @@ export default function PropertyContainer(props) {
           properties={properties}
           
           currentUser={currentUser}
+        />
+      </Route>
+      <Route path='/buy'>
+        <Buy
+          properties={properties}
+        />
+      </Route>
+      <Route path='/rent'>
+        <Rent
+          properties={properties}
         />
       </Route>
       

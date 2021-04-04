@@ -3,17 +3,18 @@ import data from "../AboutData/Data";
 import { Link } from 'react-router-dom';
 import aboutImg from "../img/banner.jpeg";
 import banner from "../img/images/bg-img.jpeg"
+import './LandingPage.css'
 
 export default function LandingPage() {
 	return (
 		<>
-			<div page="landing-page" breadcrumb="landing" />
-			<section class="landing-section spad">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="about-text">
-								<div class="at-title">
+			<div className="landing-page" />
+			<section className="landing-section spad">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-6">
+							<div className="about-text">
+								<div className="at-title">
                   <h2>Welcome to Realtors-inc</h2>
                   <img src={banner} alt=""/>
 									<p>
@@ -22,15 +23,15 @@ export default function LandingPage() {
 										type.
 									</p>
 								</div>
-								<div class="at-feature">
+								<div className="at-feature">
 									{data.map((item) => {
 										const { id, img, title, text } = item;
 										return (
-											<div class="af-item" key={id}>
-                        <div class="af-icon">
+											<div className="af-item" key={id}>
+                        <div className="af-icon">
                           <img src={img} alt="" />
 												</div>
-												<div class="af-text">
+												<div className="af-text">
 													<h6>{title}</h6>
 													<p>{text}</p>
 												</div>

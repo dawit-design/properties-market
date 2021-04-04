@@ -32,14 +32,17 @@ export default function Layout(props) {
       <hr />
       {currentUser && (
         <div className="tab-container">
+          <div className="li">
           <Link to='/properties'>Properties<i className="fa fa-home"></i> </Link>
-          <Link to='/sell/new'>Sell</Link>
           <Link to='/buy'>Buy</Link>
+          <Link to='/rent'>Rent</Link>
+          <Link to='/sell/new'>Sell</Link>
           <Link to='/agents'>Agents</Link>
           <Link to='/contact'>Contact</Link>
           <Link to='/about'>About</Link>
           <Link onClick={handleLogout}>Sign Out</Link>
-          <hr />
+            <hr />
+            </div>
         </div>
       )}
       {props.children}

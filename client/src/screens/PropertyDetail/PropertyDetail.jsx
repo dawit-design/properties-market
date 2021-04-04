@@ -2,14 +2,14 @@ import {useState, useEffect} from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getOneProperty} from '../../services/properties';
 import Modal from '../../components/Modal'
-
 import React from 'react'
+import './PropertyDetail.css'
 
 export default function PropertyDetail(props) {
   const [property, setProperty] = useState(null);
   const [open, handleOpen] = useState(false)
   const { id } = useParams();
-  const { properties, handleDelete} =props;
+  const { currentUser,handleDelete} =props;
 
 
   useEffect(() => {
@@ -20,30 +20,29 @@ export default function PropertyDetail(props) {
     fetchOneProperty();
   }, [id]);
  
-  // useEffect(() => {
-  //   if (properties.length) {
-  //     const oneProperty = properties.find((property) => property.id === Number(id))
-  //     console.log(oneProperty)
-  //     setProperty(oneProperty);
-  //   }
-  // }, [property,id])
-
-
   return (
     <div>
       {
         property &&
         <div>
-          <h2>{property.city}</h2>
-          <img key={ property.id}src={property.image_url} alt="" />
+          <h2>{property.city.toUpperCase()}, {property.state.toUpperCase()}</h2>
+          <h3>{property.street_adress}</h3>
+          <img key={property.id} src={property.image_url} alt="" />
+          <h3>It was built in <span>{property.year_bulit_in}</span></h3>
+          <h3>$: {property.price}</h3>
+          <p>{property.description}</p>
+          {
+            // currentUser?.id === property.user_id &&
+            <>
           <Link to={`/properties/${property.id}/edit`}> 
             <br/>
             <button>Edit</button></Link>
-      
           <button onClick={() => handleOpen(property.id)}>delete</button>
-        </div>
+          </>
+          }
+          </div>
         
-             
+        
       }
 
       <br />
