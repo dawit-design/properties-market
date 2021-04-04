@@ -1,0 +1,27 @@
+.image-container{
+  display: inline-block;
+  flex-direction: column;
+  color: hsl(265, 93%, 60%);
+  margin: 15px;
+  width: 650px;
+  height: 560px;
+  background: linear-gradient(
+    90deg,
+    rgba(9,76,89 0.3) 0%,
+    rgba(9,76,89 0.7) 100%
+  );
+  border: 1px solid hsl(265, 93%, 60%);
+  border-radius: 18px;
+  box-shadow: 5px 8px rgba(110, 94, 254, 0.3);
+}
+.image-container:hover {
+  box-shadow: 5px 8px #37b9f1;
+}
+.pro-img{
+  width: 650px;
+  height: 560px;
+  padding: 0.5vh;
+  border: 1px solid lightblue;
+  border-radius: 20px;
+  box-shadow: 5px 8px #37b9f1;
+}

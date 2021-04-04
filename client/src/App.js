@@ -29,13 +29,13 @@ function App() {
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    history.push('/properties');
+    history.push('/landing');
   }
 
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
-    history.push('/properies');
+    history.push('/landing');
   }
   const handleLogout = () => {
     setCurrentUser(null);

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import './Properties.css'
+
 export default function Properties(props) {
   const { properties} = props
   const [search, setSearch] = useState("");
@@ -16,7 +17,7 @@ export default function Properties(props) {
   },[search])
 
   return (
-    <div>
+    <div className="property-container">
       <h1>Homes</h1>
       <p>These are available properties on the market right now</p>
          <div>
@@ -32,8 +33,8 @@ export default function Properties(props) {
         filterProperties.map(property => (
           <React.Fragment key={property.id}>
             <div className="image-container">
-            <Link className="pro-img" to={`/properties/${property.id}`}>
-              <img src={property.image_url} alt="" />
+            <Link className="pro-img-container" to={`/properties/${property.id}`}>
+              <img className="pro-img" src={property.image_url} alt="" />
               </Link>
               <h2>{property.city.toUpperCase()}</h2>
               </div>

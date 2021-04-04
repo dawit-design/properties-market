@@ -2,25 +2,27 @@
   flex: 1;
 }
 footer {
-  height: 360px;
-  background-color: rgba(35, 39, 46, 1);
-  padding: 2vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 24px;
-  color: #fff;
-  bottom: 0;
+  align-items: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  color: white;
+  padding: 20px;
 }
 footer a {
   display: flex;
   font-size: 18px;
   text-decoration: none;
   flex-direction: row;
-  color: #cbb26a;
+  color: #000;
   padding: 3px;
   letter-spacing: 3px;
+}
+h5{
+  color: #000;
 }
 .bottom-links{
   display: flex;

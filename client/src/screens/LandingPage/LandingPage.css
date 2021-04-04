@@ -37,9 +37,7 @@ h6, p{
   box-shadow: 5px 8px rgba(9,76,89, 0.3);
   cursor: pointer;
 }
-.landing-pic:hover{
- background: #08b3e5;
-}
+
 .landing-img-bottom{
   margin: 20px auto;
   width: 470px;
