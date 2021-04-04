@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './PropertiesCreate.css'
 
 export default function PropertyCreate(props) {
   const [formData, setFormData] = useState({
@@ -16,82 +17,72 @@ export default function PropertyCreate(props) {
   }
 
   return (
-    <form onSubmit={(e) => {
+    <form className="form" onSubmit={(e) => {
       e.preventDefault();
       handleCreate(formData);
     }}>
-      <h3>Sell your house without a realtors fee</h3>
-      <label>
-        City:
+      <h1>Sell your house without a realtors fee</h1>
+      <div className="form-container">
+      <label>City:</label>   
         <input
+            className="create-input"
           type='text'
           name='city'
           value={city}
           onChange={handleChange}
         />
-      </label>
-      <br/>
       <label>
-        State:
+          State:
+          </label>
         <input
+            className="create-input"
           type='text'
-          name='state'
+            name='state'
           value={state}
           onChange={handleChange}
         />
-      </label>
-      <br />
-      <label>
-        Street Adress:
+      <label>Street Adress: </label>
         <input
+            className="create-input"
           type='text'
           name='street_adress'
           value={street_adress}
           onChange={handleChange}
         />
-      </label>
-      <br />
-      <label>
-        Image-url:
+      <label>Image-Link:</label>
         <input
+            className="create-input"
           type='text'
           name='image_url'
           value={image_url}
           onChange={handleChange}
         />
-      </label>
-      <br />
-      <label>
-        Year-Built-In:
+      <label>Year-Built-In:</label>
         <input
+            className="create-input"
           type='text'
           name='year_bulit_it'
           value={year_bulit_in}
           onChange={handleChange}
         />
-      </label>
-      <br />
-      <label>
-        Price:
+      <label> Price: </label>
         <input
+            className="create-input"
           type='text'
           name='price'
           value={price}
           onChange={handleChange}
         />
-      </label>
-      <br />
-      <label>
-        Description:
+      <label>Description: </label>
         <textarea
+            className="create-input"
           type='text'
           name='description'
           value={description}
           onChange={handleChange}
         />
-      </label>
-      <br/>
-      <button>Submit</button>
+        <button className="create-button">Submit</button>
+        </div>
     </form>
   )
 }

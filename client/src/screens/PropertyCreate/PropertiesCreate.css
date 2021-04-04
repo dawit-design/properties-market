@@ -1,0 +1,36 @@
+.form{
+  margin: 8px auto;
+}
+.form-container {
+  width: 750px;
+  height: 770px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  color: #37b9f1;
+  background: hsl(180, 27%, 18%);
+  border-radius: 25px;
+  padding: 10px;
+  border: 1px solid hsl(198, 85%, 55%);
+  font-weight: 300px;
+}
+.create-input {
+  width: 350px;
+  border-radius: 10px;
+  height: 30px;
+  margin: 20px auto;
+  font-family: inherit;
+  background: transparent;
+  border: 2px solid #37b9f1;
+}
+.create-button{
+  width: 135px;
+  margin: 10px auto;
+  border-radius: 25px;
+  font-size: 25px;
+  border: 1px solid #37b9f1;
+  cursor: pointer;
+}
+.create-button:hover{
+  color: #37b9f1;
+}
