@@ -28,7 +28,7 @@ export default function Properties(props) {
         />
       
       </div>
-      <h3>These are available properties on the market right now</h3>
+      <h1>These are available properties on the market right now</h1>
       {
         filterProperties.map(property => (
           <React.Fragment key={property.id}>

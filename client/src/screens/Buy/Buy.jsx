@@ -6,7 +6,7 @@ export default function Buy(props) {
  
   return (
     <div>
-      <h3>Buy a home you desire</h3>
+      <h1>Buy a home you desire</h1>
       {
         properties.filter(item => (
           item.price > 10000

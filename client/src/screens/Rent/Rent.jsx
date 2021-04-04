@@ -6,7 +6,7 @@ export default function Rent(props) {
  
   return (
     <div>
-      <h3>Houses for rent</h3>
+      <h1>Houses for rent</h1>
       {
         properties.filter(item => (
           item.price < 10000
