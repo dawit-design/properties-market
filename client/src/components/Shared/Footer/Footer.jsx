@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Footer.css'
 export default function Footer() {
 	return (
 		<footer className="footer-section">
@@ -17,17 +17,13 @@ export default function Footer() {
 					<div className="col-lg-2 col-sm-6">
 						<div className="fs-widget">
 							<h5>Help</h5>
-							<ul>
-								<li>
-									<a href="#">Privacy Policy</a>
-                </li>
-                <li>
-									<a href="#">Careers</a>
-								</li>
-								<li>
-									<a href="#">FAQs</a>
-								</li>
-							</ul>
+						
+									<a className="bottom-links" href="#">Privacy Policy</a>
+                
+									<a className="bottom-links" href="#">Careers</a>
+								
+									<a className="bottom-links" href="#">FAQs</a>
+							
 						</div>
 					</div>
 					<div className="col-lg-2 col-sm-6">

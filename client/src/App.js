@@ -8,7 +8,7 @@ import Container from './containers/Container/Container'
 import Layout from './layouts/Layout';
 import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
-import Footer from "./components/Shared/Footer";
+import Footer from "./components/Shared/Footer/Footer.jsx";
 
 
 // function import
@@ -45,6 +45,7 @@ function App() {
 
   return (  
     <div className="App">
+       <div className="content">
         <Layout
         currentUser={currentUser}
         handleLogout={handleLogout}
@@ -68,9 +69,10 @@ function App() {
          
   
         </Switch>
-          <Footer />
+          
         </Layout>
-       
+      </div>
+      <Footer />
       </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import './Login.css'
 export default function Login(props) {
   const [formData, setFormData] = useState({
     username: '',
@@ -17,34 +17,41 @@ export default function Login(props) {
   }
 
   return (
-    <form onSubmit={(e)=>{
+    <form
+      className="login-form"
+      onSubmit={(e) => {
       e.preventDefault();
       handleLogin(formData);
-    }}>
-      <h3>Login</h3>
+      }}>
+      <div className="login-cont">
+      <h1>Singn In</h1>
       <label>
-        Username:
+          Username:
         <input
+            className="sign-in-input"
           type='text'
           name='username'
           autoComplete="on"
-          value={username}
+            value={username}
+            required
           onChange={handleChange}
         />
       </label>
       <br />
       <label>
-        Password:
+          Password:
         <input
+             className="sign-in-input"
           type='password'
           name='password'
-          autoComplete="on"
+          required
           value={password}
           onChange={handleChange}
         />
       </label>
       <br />
-      <button>Submit</button>
+        <button className="sign-in-btn">Sign in</button>
+        </div>
     </form>
   )
 }
