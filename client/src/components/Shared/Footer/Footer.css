@@ -2,13 +2,19 @@
   flex: 1;
 }
 footer {
-  background-color: orange;
-  position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 80px;
+    position: fixed;
+    height: 60px;
     width: 100%;
-    overflow: hidden;
+    background-color: orange;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    bottom: 0;
+    left: 0;
 }
 .footer-sec{
   display: flex;
