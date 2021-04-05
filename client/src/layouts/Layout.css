@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   margin: 10px auto;
-  float: right;
   padding-bottom: 40px;
   height: 30px;
 }
@@ -30,4 +29,18 @@
 .logo:hover {
   box-shadow: 5px 8px #37b9f1;
   box-shadow: 5px 5px #37b9f1;
+}
+/* media query for mobile and bigger size */
+@media (min-width: 320px) and (max-width: 767px){
+  .tab-container{
+    display: flex;
+    justify-content: center;
+    margin: 5px auto;
+    padding-bottom: 40px;
+    height: 30px;
+  }
+}
+/* media query for Ipad/tablet */
+@media (min-width: 768px) and (max-width: 1024px){
+
 }
