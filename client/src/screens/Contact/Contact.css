@@ -3,7 +3,7 @@ form{
 }
 .contact-form{
   width: 750px;
-  height: 450px;
+  height: 650px;
   display: flex;
   flex-direction: column;
   margin: 20px auto;
@@ -21,4 +21,31 @@ form{
   border-radius: 10px;
   align-items: center;
   background: url(../img/images/bg-img.jpeg);
+}
+.bottom-form{
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  color: #37b9f1;
+  background: #f2f5f5;
+  border-radius: 15px;
+  padding: 10px;
+  border: 1px solid #37b9f1;
+  font-weight: 300px;
+}
+.contact-form-input{
+  width: 350px;
+  border-radius: 10px;
+  height: 30px;
+  margin: 10px auto;
+  font-family: inherit;
+  
+}
+.contact-form-button{
+  width: 135px;
+  margin: 10px auto;
+  border-radius: 25px;
+  font-size: 25px;
+  border: 1px solid #37b9f1;
 }
