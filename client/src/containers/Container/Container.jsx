@@ -11,7 +11,7 @@ import Rent from '../../screens/Rent/Rent'
 import Contact from '../../screens/Contact/Contact';
 import LandingPage from '../../screens/LandingPage/Landingpage'
 import { getAllAgents } from '../../services/agents';
-import { getAllProperties,getOneProperty, postProperty, putProperty, destroyProperty } from '../../services/properties';
+import { getAllProperties,postProperty, putProperty, destroyProperty } from '../../services/properties';
 
 
 

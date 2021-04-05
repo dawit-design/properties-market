@@ -55,3 +55,34 @@
   border: 1px solid #fff;
   border-radius: 10px;
 }
+/* media query for mobile and bigger size */
+@media (min-width: 320px) and (max-width: 767px){
+  .landing-section-container{
+    padding: 0;
+  }
+  .landing-top{
+    margin: 10px auto;
+    width: 350px;
+  }
+  .layout-welcome{
+    font-size: 15px;
+    padding: 10px ;
+    margin: 10px auto;
+  }
+}
+
+/* media query for Ipad/tablet */
+@media (min-width: 768px) and (max-width: 1024px){
+  .landing-section-container{
+    padding: 0 10px;
+  }
+  .landing-top{
+    margin: 15px auto;
+    width: 350px;
+  }
+  .layout-welcome{
+    font-size: 30px;
+    padding: 15px ;
+    margin: 15px auto;
+  }
+}
