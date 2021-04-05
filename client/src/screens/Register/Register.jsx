@@ -20,7 +20,7 @@ export default function Register(props) {
 
   return (
     
-    <form className="form-container" onSubmit={(e)=>{
+    <form className="register-container" onSubmit={(e)=>{
       e.preventDefault();
       handleRegister(formData);
     }}>

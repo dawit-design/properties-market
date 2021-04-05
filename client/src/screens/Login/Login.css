@@ -1,5 +1,4 @@
 body{
-	margin:0;
 	color:#6a6f8c;
 	background:#c8c8c8;
 	font:600 16px/18px 'Open Sans',sans-serif;
@@ -51,6 +50,9 @@ body{
 }
 .sign-in-btn:hover{
   color : #37b9f1;
+  opacity: 0.8;
+  box-shadow: 0 2px 4px #fff;
+  transition: 0.1s ease;
 }
 
 

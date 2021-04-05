@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-
+import './Contact.css'
 const Contact = () => {
   const [status, setStatus] = useState("Submit");
 
   const handleSubmit = async (e) => {
-    if(!e.target.checkValidity())
-    setStatus("Sending...");
-    const { name, email, message, number} = e.target.elements;
+    if (!e.target.checkValidity())
+      setStatus("Sending...");
+    const { name, email, message, number } = e.target.elements;
     let details = {
       name: name.value,
       email: email.value,
@@ -29,43 +29,38 @@ const Contact = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className='contact-form'>
-              <div id='sect1'>
-          <span>
+        <div className='first-section'>
+          <h1>
             Contact us and we will get back to you within 24 hours.
-            </span>
-          <br/>
-                  <span>
-                      <i className="fas fa-map-marker-alt"></i>
+            </h1>
+          <br />
+          <span>
+            <i className="fas fa-map-marker-alt"></i>
                       Somerville,MA
                   </span>
-          <br/>
-                  <span>
-                      <i className="fas fa-mobile-alt"></i>
+          <br />
+          <span>
+            <i className="fas fa-mobile-alt"></i>
                       +123 456 7890
                   </span>
-          <br/>
-                  <span>
-                      <i className="far fa-envelope"></i>
+          <br />
+          <span>
+            <i className="far fa-envelope"></i>
                       realtors-inc@gmail.com
                   </span>
-          </div>
-      
-        <label htmlFor="name" required>Name:</label>
-        <input type="text" id="name" required />
+        </div>
+        <div className="bottom-form">
+          <label htmlFor="name" required>Name:</label>
+          <input type="text" id="name" required />
+          <label htmlFor="email" required>Email:</label>
+          <input type="email" id="email" required />
+          <label htmlFor="phone" required>Phone Number:</label>
+          <input type="number" id="number" required />
+          <label htmlFor="message" required>Message:</label>
+          <textarea id="message" required />
+          <button type="submit">{status}</button>
+        </div>
       </div>
-      <div>
-        <label htmlFor="email" required>Email:</label>
-        <input type="email" id="email" required />
-      </div>
-      <div>
-        <label htmlFor="phone" required>Phone Number:</label>
-        <input type="number" id="number" required />
-      </div>
-      <div>
-        <label htmlFor="message" required>Message:</label>
-        <textarea id="message" required />
-      </div>
-      <button type="submit">{status}</button>
     </form>
   );
 };

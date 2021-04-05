@@ -9,37 +9,37 @@ export default function Layout(props) {
   return (
     <div className="layout-container">
       <header>
-       
+
         <Link to="/landing">
-          <img className="logo" src={logo2} alt="icon"/>
+          <img className="logo" src={logo2} alt="icon" />
         </Link>
-        {/* <Link to='/landing'><h1>Realtors-inc</h1></Link> */}
-        
+
         {
           currentUser ?
             <>
-              <p>Welcome, {currentUser.username.toUpperCase()}</p>
+
               <div className="tab-container">
-          <div className="links-header">
-          <Link to='/properties'>Properties<i className="fa fa-home"></i> </Link>
-          <Link to='/buy'>Buy</Link>
-          <Link to='/rent'>Rent</Link>
-          <Link to='/sell/new'>Sell</Link>
-          <Link to='/agents'>Agents</Link>
-          <Link to='/contact'>Contact</Link>
-          <Link to='/about'>About</Link>
-          <Link onClick={handleLogout}>Sign Out</Link>
-            <hr />
-            </div>
-        </div>
-              
+                <div className="links-header">
+                  <p className="layout-links">Welcome, {currentUser.username.toUpperCase()}</p>
+                  <Link className="layout-links" to='/properties'>Properties<i className="fa fa-home"></i> </Link>
+                  <Link className="layout-links" to='/buy'>Buy</Link>
+                  <Link className="layout-links" to='/rent'>Rent</Link>
+                  <Link className="layout-links" to='/sell/new'>Sell</Link>
+                  <Link className="layout-links" to='/agents'>Agents</Link>
+                  <Link className="layout-links" to='/contact'>Contact</Link>
+                  <Link className="layout-links" to='/about'>About</Link>
+                  <Link className="layout-links" onClick={handleLogout}>Sign Out</Link>
+                  <hr />
+                </div>
+              </div>
+
             </>
             :
-            <>
-              <Link to='/login'>Sign In</Link>
-              <Link to='/Register'>Register</Link>
-            </>
-            
+            <div className="tab-container">
+              <Link className="layout-links" to='/login'>Sign In</Link>
+              <Link className="layout-links" to='/Register'>Register</Link>
+            </div>
+
         }
       </header>
       <hr />
