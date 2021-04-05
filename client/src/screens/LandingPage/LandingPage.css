@@ -10,6 +10,7 @@
 }
 .landing-top{
   margin: 20px auto;
+  width: 650px;
 }
 .layout-welcome{
   font-size: 45px;
@@ -36,7 +37,7 @@
   cursor: pointer;
 }
 .landing-ptag{
-  color: #fff;
+  color: #37b9f1;
   margin: 14px auto;
 }
 .landing-text{
