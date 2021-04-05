@@ -43,6 +43,7 @@ export default function About() {
 }
 const Header = () =>{
   return(
+    
       <div className='header'>
           <span className='header-title'>
              <h1> Realtors-inc</h1>
@@ -57,7 +58,8 @@ const Header = () =>{
 }
 
 const Card = (props) =>{
-  return(
+  return (
+    <div className="body-section">
       <div className={props.className} >
           <div className="small-div">
               <i className={props.className}></i>
@@ -74,6 +76,7 @@ const Card = (props) =>{
               </span>
           </div>
       </div>
+  </div>
   )
 }
 
