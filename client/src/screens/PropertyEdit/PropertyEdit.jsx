@@ -43,82 +43,73 @@ export default function PropertyEdit(props) {
     }))
   }
   return (
-    <form onSubmit={(e) => {
+    <form className="form" onSubmit={(e) => {
       e.preventDefault();
       handleUpdate(id, formData);
     }}>
       <h3>Make changes to property</h3>
-      <label>
-        City:
+      <div className="form-container">
+      <label>City:</label>   
         <input
+            className="create-input"
           type='text'
           name='city'
           value={city}
           onChange={handleChange}
         />
-      </label>
-      <br />
       <label>
-        State:
+          State:
+          </label>
         <input
+            className="create-input"
           type='text'
-          name='state'
+            name='state'
           value={state}
           onChange={handleChange}
         />
-      </label>
-      <br />
-      <label>
-        Street Adress:
+      <label>Street Adress: </label>
         <input
+            className="create-input"
           type='text'
           name='street_adress'
           value={street_adress}
           onChange={handleChange}
         />
-      </label>
-      <br />
-      <label>
-        Image-url:
+      <label>Image-Link:</label>
         <input
+            className="create-input"
           type='text'
           name='image_url'
           value={image_url}
           onChange={handleChange}
         />
-      </label>
-      <br />
-      <label>
-        Year-Built-In:
+      <label>Year-Built-In:</label>
         <input
+            className="create-input"
           type='text'
-          name='year_bulit_in'
+          name='year_bulit_it'
           value={year_bulit_in}
           onChange={handleChange}
         />
-      </label>
-      <br />
-      <label>
-        Price:
+      <label> Price: </label>
         <input
+            className="create-input"
           type='text'
           name='price'
           value={price}
           onChange={handleChange}
         />
-      </label>
-      <br />
-      <label>
-        Description:
-        <input
+      <label>Description: </label>
+        <textarea
+            className="create-input"
           type='text'
           name='description'
           value={description}
           onChange={handleChange}
         />
-      </label>
       <br/>
-      <button>Submit</button>
+        <button className="create-button">Submit</button>
+        </div>
     </form>
   )
 }

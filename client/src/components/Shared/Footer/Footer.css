@@ -11,6 +11,7 @@ footer {
   flex-shrink: 0;
   color: white;
   padding: 20px;
+  border: 1px solid #37b9f1;
 }
 footer a {
   display: flex;

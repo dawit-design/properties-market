@@ -21,16 +21,18 @@ export default function PropertyDetail(props) {
   }, [id]);
  
   return (
-    <div>
+    <div className="property-container">
       {
         property &&
-        <div>
-          <h2>{property.city.toUpperCase()}, {property.state.toUpperCase()}</h2>
-          <h3>{property.street_adress}</h3>
-          <img key={property.id} src={property.image_url} alt="" />
-          <h3>It was built in <span>{property.year_bulit_in}</span></h3>
-          <h3>$: {property.price}</h3>
-          <p>{property.description}</p>
+        <div className="detail-image-container">
+          <img className="detail-pro-img" key={property.id} src={property.image_url} alt="" />
+          
+          <h2 className="detail-city">{property.city.toUpperCase()}, {property.state.toUpperCase()}</h2>
+          <h5 className="detail-city">{property.street_adress}</h5>
+          
+          <h5 className="detail-city">It was built in <span>{property.year_bulit_in}</span></h5>
+          <h5 className="detail-city">$: {property.price}</h5>
+          <p className="detail-ptag">{property.description}</p>
           {
             // currentUser?.id === property.user_id &&
             <>

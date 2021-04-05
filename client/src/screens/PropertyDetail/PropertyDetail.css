@@ -1,0 +1,26 @@
+.detail-image-container{
+  display: inline-block;
+  flex-direction: column;
+  color: hsl(198, 85%, 55%);
+  margin: 15px auto;
+  padding: 30px;
+  width: 550px;
+  height: 500px;
+  border-radius: 18px;
+  
+}
+.detail-pro-img{
+  width: 550px;
+  height: 500px;
+  padding: 0.5vh;
+  border: 1px solid lightblue;
+  border-radius: 20px;
+  /* box-shadow: 5px 8px  #fff; */
+}
+.detail-ptag{
+  color: #000;
+}
+.detail-city{
+  margin: 10px auto;
+  padding: 10px auto;
+}
