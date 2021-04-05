@@ -33,14 +33,36 @@
 /* media query for mobile and bigger size */
 @media (min-width: 320px) and (max-width: 767px){
   .tab-container{
-    display: flex;
-    justify-content: center;
     margin: 5px auto;
-    padding-bottom: 40px;
-    height: 30px;
+    padding-bottom: 20px;
+    height: 20px;
+  }
+  .layout-links{
+    margin: 5px;
+    font-size: 14px;
+  }
+  .logo{
+  width : 35px;
+  height : 35px;
+  margin: 5px;
+  padding : 5px;
   }
 }
 /* media query for Ipad/tablet */
 @media (min-width: 768px) and (max-width: 1024px){
-
+  .tab-container{
+    margin: 8px auto;
+    padding-bottom: 30px;
+    height: 25px;
+  }
+  .layout-links{
+    margin: 8px;
+    font-size: 25px;
+  }
+  .logo{
+    width : 55px;
+    height : 55px;
+    margin: 7px;
+    padding : 7px;
+    }
 }
