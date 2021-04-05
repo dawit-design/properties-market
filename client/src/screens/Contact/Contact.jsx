@@ -51,14 +51,14 @@ const Contact = () => {
         </div>
         <div className="bottom-form">
           <label htmlFor="name" required>Name:</label>
-          <input type="text" id="name" required />
+          <input className="contact-form-input" type="text" id="name" required />
           <label htmlFor="email" required>Email:</label>
-          <input type="email" id="email" required />
+          <input  className="contact-form-input" type="email" id="email" required />
           <label htmlFor="phone" required>Phone Number:</label>
-          <input type="number" id="number" required />
+          <input  className="contact-form-input" type="number" id="number" required />
           <label htmlFor="message" required>Message:</label>
-          <textarea id="message" required />
-          <button type="submit">{status}</button>
+          <textarea  className="contact-form-input" id="message" required />
+          <button className="contact-form-button" type="submit">{status}</button>
         </div>
       </div>
     </form>
