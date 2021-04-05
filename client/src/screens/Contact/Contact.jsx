@@ -58,7 +58,7 @@ const Contact = () => {
           <input  className="contact-form-input" type="number" id="number" required />
           <label htmlFor="message" required>Message:</label>
           <textarea  className="contact-form-input" id="message" required />
-          <button  className="contact-form-button"type="submit">{status}</button>
+          <button className="contact-form-button" type="submit">{status}</button>
         </div>
       </div>
     </form>
