@@ -40,7 +40,7 @@ body{
 .sign-in-btn{
   width: 120px;
   padding: 7px;
-  margin: 10px 0;
+  margin: 10px auto;
   background-color: tomato;
   border: none;
   outline: none;

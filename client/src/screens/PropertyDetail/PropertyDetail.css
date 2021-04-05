@@ -24,3 +24,32 @@
   margin: 10px auto;
   padding: 10px auto;
 }
+.detail-button-container{
+  display: flex;
+  flex-direction: row;
+  margin : 20px auto;
+  justify-content: center;
+  align-items: center;
+}
+.detail-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  padding: 7px;
+  margin: 10px auto;
+  background-color: tomato;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  border-radius: 25px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #eee;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
+}
+.ask-tour-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
