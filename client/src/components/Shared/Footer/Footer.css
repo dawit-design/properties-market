@@ -12,6 +12,7 @@ footer {
   color: white;
   padding: 20px;
   border: 1px solid #37b9f1;
+  bottom: 0;
 }
 footer a {
   display: flex;
