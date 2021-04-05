@@ -19,19 +19,7 @@ export default function Layout(props) {
           currentUser ?
             <>
               <p>Welcome, {currentUser.username.toUpperCase()}</p>
-              
-            </>
-            :
-            <>
-              <Link to='/login'>Sign In</Link>
-              <Link to='/Register'>Register</Link>
-            </>
-            
-        }
-      </header>
-      <hr />
-      {currentUser && (
-        <div className="tab-container">
+              <div className="tab-container">
           <div className="links-header">
           <Link to='/properties'>Properties<i className="fa fa-home"></i> </Link>
           <Link to='/buy'>Buy</Link>
@@ -44,7 +32,17 @@ export default function Layout(props) {
             <hr />
             </div>
         </div>
-      )}
+              
+            </>
+            :
+            <>
+              <Link to='/login'>Sign In</Link>
+              <Link to='/Register'>Register</Link>
+            </>
+            
+        }
+      </header>
+      <hr />
       {props.children}
     </div>
   )
