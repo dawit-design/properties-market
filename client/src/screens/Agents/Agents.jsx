@@ -6,8 +6,8 @@ export default function Agents(props) {
   const { agents } = props;
   return (
     <div className="container">
-      <div className="heading">
-      <h1>Agents</h1>
+      <div className="age-heading">
+      <h1 className="agents-heading">Our Amazing Agents</h1>
       </div>
     <div className="profile-card">
         
