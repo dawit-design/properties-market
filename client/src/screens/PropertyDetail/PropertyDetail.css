@@ -26,7 +26,7 @@
 .detail-button-container{
   display: flex;
   flex-direction: row;
-  margin : 20px auto;
+  /* margin : 20px auto; */
   justify-content: center;
   align-items: center;
 }
@@ -44,7 +44,15 @@
   font-family: 'Josefin Sans', sans-serif;
   color: #eee;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
+  cursor: pointer;
 }
+.detail-btn:hover{
+  color : #37b9f1;
+  opacity: 0.8;
+  box-shadow: 0 2px 4px #fff;
+  transition: 0.1s ease;
+}
+
 .ask-tour-button{
   display: flex;
   flex-direction: column;
