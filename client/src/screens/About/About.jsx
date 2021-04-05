@@ -1,7 +1,5 @@
 import React from 'react';
-import './Assets/apt.jpeg'
-import './Assets/house.jpeg'
-import './Assets/house2.jpeg'
+import './About.css'
 
 
 export default function About() {
@@ -11,7 +9,6 @@ export default function About() {
       <Header />
       <Card
         className='section'
-        img='./apt.jpeg'
         title='About the Company' 
         description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -22,7 +19,6 @@ export default function About() {
       />
       <Card 
                 className='section bg-grey'
-                img='./house.jpeg' 
                 title='Our Values'
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -34,7 +30,6 @@ export default function About() {
 
             <Card 
                 className='section'
-                img='./house2.jpeg' 
                 title='Our Mission' 
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -43,7 +38,6 @@ export default function About() {
                         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                         pariatur.'
             />
-      <ContactContainer/>
     </div>
   )
 }
@@ -84,36 +78,5 @@ const Card = (props) =>{
 }
 
 
-
-const ContactContainer = () => {
-  return(
-      <div className='contact-container bg-grey'>
-          <span className="div-title">Contact us</span>
-          <div className='contact-form'>
-              <div id='sect1'>
-          <span>
-            Contact us and we will get back to you within 24 hours.
-            </span>
-          <br/>
-                  <span>
-                      <i className="fas fa-map-marker-alt"></i>
-                      Somerville,MA
-                  </span>
-          <br/>
-                  <span>
-                      <i className="fas fa-mobile-alt"></i>
-                      +123 456 7890
-                  </span>
-          <br/>
-                  <span>
-                      <i className="far fa-envelope"></i>
-                      realtors-inc@gmail.com
-                  </span>
-              </div>
-          </div>
-      </div>
-  );
-
-}
 
 
