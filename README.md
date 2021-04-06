@@ -1,7 +1,7 @@
 # realtors-inc
 ## Overview
 
-realtors-inc is a full CRUD web app build using React and Rails for property market.
+realtors-inc is a full CRUD web app built using React and Rails for property market.
 
 
 <br>
@@ -104,16 +104,16 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create Backend full CRUD |    H     |     4 hrs      |        |        |
-| Deploy backend   |    H     |     30 min      |        |     |
-| Setup frontend structure   |    H     |     1 hrs      |       |      |
-| Add Landing page   |    L     |     1.5hrs    |         |       |
-| Add Register/Login function   |    H     |     2 hrs      |         |        |
-| Setup Property page & render data    |    H     |     2 hrs      |         |      |
-| Add Edit and Detail   |    L     |     2 hrs      |      |   |
-| Add Create Form    |    L     |     2 hrs      |         |    3 hrs    |
-| CSS    |    H     |     4 hrs      |        |      |
-| TOTAL               |          |     20 hrs      |         |         |
+| Create Backend full CRUD |    H     |     4 hrs      |   6 hrs     |    6 hrs    |
+| Deploy backend   |    H     |     30 min      |  30 min      |  30 min   |
+| Setup frontend structure   |    H     |     1 hrs      |   3 hrs    |  3 hrs    |
+| Add Landing page   |    L     |     1.5hrs    |    2 hrs     |  2 hrs     |
+| Add Register/Login function   |    H     |     2 hrs      |    3 hrs     |   3 hrs     |
+| Setup Property page & render data    |    H     |     2 hrs      |   4 hrs      |  4 hrs    |
+| Add Edit and Detail   |    L     |     2 hrs      |   3 hrs   | 3 hrs  |
+| Add Create Form    |    L     |     2 hrs      |     2 hrs    |    3 hrs    |
+| CSS    |    H     |     4 hrs      |   4 hrs     |  4 hrs    |
+| TOTAL            |     20 hrs      |    28 hrs     |     28 hrs    |
 
 <br>
 
@@ -129,17 +129,26 @@ src
 
 ## Post-MVP
 
-| Create Tour from    |    L     |     2 hrs      |      |     |
-| Add Contact Form    |    L     |     2 hrs      |        |       |
-| Add Agents Detail page   |    L     |     2 hrs      |         |     |
-| Add Animation and pop ups   |    L     |     2 hrs      |        |        |
-| Total  | | 8hrs    |        |          |
+| Add Contact Form    |    L     |     2 hrs      |   2 hrs     |   2 hrs    |
+| Total  | | 2hrs    |     2 hrs   |    2 hrs      |
 
 ***
 
 ## Code Showcase
 
-
+export default function Properties(props) {
+  const { properties} = props
+  const [search, setSearch] = useState("");
+  const [filterProperties, setFilterProperties] = useState([]);
+  useEffect(() => {
+    if (properties) {
+      setFilterProperties(
+        properties.filter((property) => {
+         return property.city.toLowerCase().includes(search.toLowerCase())
+       })
+     )
+   }
+  },[search])
 
 ## Code Issues & Resolutions
 
