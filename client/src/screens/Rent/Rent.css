@@ -22,3 +22,12 @@
   border-radius: 20px;
   box-shadow: 5px 8px  #fff;
 }
+/* media query for mobile and bigger size */
+@media (min-width: 320px) and (max-width: 767px){
+
+}
+
+/* media query for Ipad/tablet */
+@media (min-width: 768px) and (max-width: 1024px){
+
+}
