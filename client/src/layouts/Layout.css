@@ -41,9 +41,12 @@
     margin: 5px;
     font-size: 11px;
   }
-  /* .logo{
-  display: none;
-  } */
+  .logo{
+    width : 35px;
+    height : 35px;
+    margin: 5px;
+    padding : 5px;
+    }
 }
 /* media query for Ipad/tablet */
 @media (min-width: 768px) and (max-width: 1024px){
