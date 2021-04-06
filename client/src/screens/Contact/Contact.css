@@ -49,3 +49,53 @@ form{
   font-size: 25px;
   border: 1px solid #37b9f1;
 }
+/* media query for mobile and bigger size */
+@media (min-width: 320px) and (max-width: 767px){
+  .contact-form{
+    width: 305px;
+    height: 350;  
+    margin: 10px auto;
+    padding: 5px;
+  }
+  .bottom-form{
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    padding: 3px ;
+  }
+  .contact-form-input{
+    width: 235px;
+    height: 20px;
+  margin: 7px auto;
+  }
+  .contact-form-button{
+    width: 95px;
+    font-size: 17px;
+    margin: 7px auto;
+  }
+}
+/* media query for Ipad/tablet */
+@media (min-width: 768px) and (max-width: 1024px){
+  .contact-form{
+    width: 525px;
+    height: 470;  
+    margin: 15px auto;
+    padding: 8px;
+  }
+  .bottom-form{
+    width: 450px;
+    height: 410px;
+    margin: 15px auto;
+    padding: 7px ;
+  }
+  .contact-form-input{
+    width: 325px;
+    height: 27px;
+  margin: 7px auto;
+  }
+  .contact-form-button{
+    width: 115px;
+    font-size: 21px;
+    margin: 9px auto;
+  }
+}
