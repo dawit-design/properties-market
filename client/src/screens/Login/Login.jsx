@@ -32,7 +32,7 @@ export default function Login(props) {
           type='text'
           name='username'
           autoComplete="on"
-            value={username}
+            value={username.toLocaleLowerCase()}
             required
           onChange={handleChange}
         />
