@@ -16,7 +16,7 @@ export default function Buy(props) {
             <Link to={`/properties/${property.id}`}>
             <img className="pro-img" src={property.image_url} alt=""/>
               </Link>
-              <h2>{property.city.toUpperCase()},{property.state.toUpperCase()}</h2>
+              <h2 className='rent-head'>{property.city.toUpperCase()},{property.state.toUpperCase()}</h2>
             </div>
           </React.Fragment>
         ))
