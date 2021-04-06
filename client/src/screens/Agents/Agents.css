@@ -106,44 +106,11 @@
   }
 }
 
-@media(max-width: 1000px) {
-  .container {
-      height: 100%;
-  }
-  .heading {
-      width: 90%;
-  }
+/* media query for mobile and bigger size */
+@media (min-width: 320px) and (max-width: 767px){
 
-  .cards-wrapper {
-      flex-wrap: wrap;
-      padding: 300px 0 200px 0;
-  }
-
-  .card {
-      margin: 0 30px 50px 30px;
-  }
 }
+/* media query for Ipad/tablet */
+@media (min-width: 768px) and (max-width: 1024px){
 
-@media(max-width: 700px) {
-  .heading {
-      font-size: 50px;
-  }
-
-  .heading::after {
-      height: 40px;
-  }
-}
-
-@media(max-width: 450px) {
-  .heading {
-      font-size: 40px;
-  }
-
-  .heading::after {
-      height: 33px;
-  }
-
-  .cards-wrapper {
-      padding: 250px 0 150px 0;
-  }
 }
