@@ -14,7 +14,7 @@ body {
 }
 .sign-up-form{
   width: 650px;
-  height: 450px;
+  height: 500px;
   margin: 40px auto;
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@ h1 {
   border-bottom: 1px solid #AAA;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 20px;
   transition: 0.2s ease;
   background: transparent;
     border: none;
@@ -74,4 +74,37 @@ h1 {
   opacity: 0.8;
   box-shadow: 0 2px 4px #fff;
   transition: 0.1s ease;
+}
+/* media query for mobile and bigger size */
+@media (min-width: 320px) and (max-width: 767px){
+.sign-up-form{
+  width: 300px;
+  height: 470px;
+  margin: 20px auto;
+padding: 5px;
+}
+.form-input{
+  margin: 10px auto;
+    padding: 2px auto;
+    width: 270px;
+    height: 18px;
+  font-size: 15px;
+}
+}
+
+/* media query for Ipad/tablet */
+@media (min-width: 768px) and (max-width: 1024px){
+  .sign-up-form{
+    width: 500px;
+    height: 470px;
+    margin: 30px auto;
+  padding: 7px;
+  }
+  .form-input{
+    margin: 15px auto;
+      padding: 4px auto;
+      width: 350px;
+      height: 24px;
+    font-size: 15px;
+  }
 }

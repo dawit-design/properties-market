@@ -20,7 +20,7 @@ export default function Layout(props) {
               <div className="tab-container">
                 <div className="links-header">
                   <p className="layout-links">Welcome, {currentUser.username.toUpperCase()}</p>
-                  <Link className="layout-links" to='/properties'>Properties<i className="fa fa-home"></i> </Link>
+                  <Link className="layout-links" to='/properties'>Home<i className="fa fa-home"></i> </Link>
                   <Link className="layout-links" to='/buy'>Buy</Link>
                   <Link className="layout-links" to='/rent'>Rent</Link>
                   <Link className="layout-links" to='/sell/new'>Sell</Link>
