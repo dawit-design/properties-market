@@ -22,6 +22,18 @@
   border-radius: 20px;
   box-shadow: 5px 8px  #fff;
 }
+.search-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px auto;
+  width: 500px;
+  height: 32px;
+
+  border-radius: 15px;
+  background: transparent;
+  border: 2px solid #37b9f1;
+}
 /* media query for mobile and bigger size */
 @media (min-width: 320px) and (max-width: 767px){
  .image-container{
@@ -41,6 +53,9 @@
   height: 22px;
   margin: 20 px;
 }
+.home-h1-title{
+  font-size: 16px;
+}
 }
 
 /* media query for Ipad/tablet */
@@ -58,15 +73,4 @@
      font-weight: light;
    }
 }
-.search-box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 35px auto;
-  width: 550px;
-  height: 32px;
 
-  border-radius: 15px;
-  background: transparent;
-  border: 2px solid #37b9f1;
-}
