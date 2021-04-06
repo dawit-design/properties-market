@@ -41,7 +41,7 @@ export default function PropertyDetail(props) {
                 <Link to={`/properties/${property.id}/edit`}>
                   <button className="detail-btn">Edit</button></Link>
                 <button className="detail-btn" onClick={() => handleOpen(property.id)}>delete</button>
-                <Link to='/contact' className="ask-tour-button"><button className="sign-in-btn">Ask Tour</button></Link>
+                <Link to='/contact' className="ask-tour"><button className="ask-tour-button">Ask Tour</button></Link>
                 {open && (
                   <Modal
                     open={open}

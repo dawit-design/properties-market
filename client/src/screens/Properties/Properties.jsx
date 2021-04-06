@@ -33,11 +33,11 @@ export default function Properties(props) {
         filterProperties.map(property => (
           <React.Fragment key={property.id}>
             <div className="image-container">
-            <Link className="pro-img-container" to={`/properties/${property.id}`}>
+              <Link className="pro-img-container" to={`/properties/${property.id}`}>
               <img className="pro-img" src={property.image_url} alt="" />
               </Link>
               <h2>{property.city.toUpperCase()}</h2>
-              </div>
+          </div>
           </React.Fragment>
         ))
       }

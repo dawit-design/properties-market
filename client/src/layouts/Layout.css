@@ -39,14 +39,11 @@
   }
   .layout-links{
     margin: 5px;
-    font-size: 14px;
+    font-size: 11px;
   }
-  .logo{
-  width : 35px;
-  height : 35px;
-  margin: 5px;
-  padding : 5px;
-  }
+  /* .logo{
+  display: none;
+  } */
 }
 /* media query for Ipad/tablet */
 @media (min-width: 768px) and (max-width: 1024px){

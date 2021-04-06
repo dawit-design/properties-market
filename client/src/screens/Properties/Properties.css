@@ -29,9 +29,31 @@
   margin: 35px auto;
   width: 550px;
   height: 32px;
-  /* margin: 20px auto; */
+
   border-radius: 15px;
   background: transparent;
-  /* border: none; */
   border: 2px solid #37b9f1;
+}
+/* media query for mobile and bigger size */
+@media (min-width: 320px) and (max-width: 767px){
+  .image-container{
+    width: 80px;
+  height: 80px;
+  margin: 8px;
+  }
+  .pro-img{
+    width: 250px;
+  height: 200px;
+  /* padding: 0.5vh; */
+  }
+  .search-box{
+    width: 250px;
+    height: 22px;
+    margin: 20 px;
+  }
+}
+
+/* media query for Ipad/tablet */
+@media (min-width: 768px) and (max-width: 1024px){
+
 }

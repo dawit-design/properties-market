@@ -55,7 +55,58 @@
 
 .ask-tour-button{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 120px;
+  padding: 7px;
+  margin: 10px auto;
+  background-color: tomato;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #eee;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
+  cursor: pointer;
+}
+
+/* media query for mobile and bigger size */
+@media (min-width: 320px) and (max-width: 767px){
+.detail-image-container{
+  margin: 9px auto;
+  padding: 15px;
+  width: 250px;
+  height: 200px;
+}
+.detail-pro-img{
+  width: 270px;
+  height: 250px;
+  padding: 0.5vh;
+}
+.detail-btn, .ask-tour-button{
+  width: 70px;
+  padding: 4px;
+
+}
+}
+
+/* media query for Ipad/tablet */
+@media (min-width: 768px) and (max-width: 1024px){
+  .detail-image-container{
+    margin: 12px auto;
+    padding: 15px;
+    width: 450px;
+    height: 400px;
+  }
+  .detail-pro-img{
+    width: 400px;
+    height: 270px;
+    padding: 0.5vh;
+  }
+  .detail-btn, .ask-tour-button{
+    width: 100px;
+    padding: 6px;
+  
+  }
+ 
 }
